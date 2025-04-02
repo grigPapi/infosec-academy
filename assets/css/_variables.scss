@@ -1,0 +1,114 @@
+/**
+ * InfoSec Academy - Переменные для стилей
+ */
+
+ :root {
+  /* Основные цвета */
+  --primary-color: #2c3e50;
+  --primary-color-rgb: 44, 62, 80;
+  --primary-color-dark: #1a252f;
+  --secondary-color: #3498db;
+  --secondary-color-rgb: 52, 152, 219;
+  --secondary-color-dark: #2980b9;
+  --accent-color: #e74c3c;
+  --accent-color-rgb: 231, 76, 60;
+  --accent-color-dark: #c0392b;
+  
+  /* Нейтральные цвета */
+  --light-color: #ecf0f1;
+  --light-color-rgb: 236, 240, 241;
+  --gray-color: #95a5a6;
+  --gray-color-rgb: 149, 165, 166;
+  --dark-color: #2c3e50;
+  --dark-color-rgb: 44, 62, 80;
+  
+  /* Функциональные цвета */
+  --success-color: #2ecc71;
+  --success-color-rgb: 46, 204, 113;
+  --warning-color: #f39c12;
+  --warning-color-rgb: 243, 156, 18;
+  --danger-color: #e74c3c;
+  --danger-color-rgb: 231, 76, 60;
+  --info-color: #3498db;
+  --info-color-rgb: 52, 152, 219;
+  
+  /* Цвета текста */
+  --text-color: #333;
+  --text-color-rgb: 51, 51, 51;
+  --text-light: #666;
+  --text-light-rgb: 102, 102, 102;
+  --heading-color: #2c3e50;
+  --heading-color-rgb: 44, 62, 80;
+  
+  /* Цвета фона */
+  --background-color: #f8f9fa;
+  --background-color-rgb: 248, 249, 250;
+  --background-light: #fff;
+  --background-light-rgb: 255, 255, 255;
+  --background-dark: #f1f5f9;
+  --background-dark-rgb: 241, 245, 249;
+  
+  /* Цвета границ */
+  --border-color: #ddd;
+  --border-color-rgb: 221, 221, 221;
+  --border-dark: #ccc;
+  --border-dark-rgb: 204, 204, 204;
+  
+  /* Цвета ссылок */
+  --link-color: #3498db;
+  --link-color-rgb: 52, 152, 219;
+  --link-hover-color: #2980b9;
+  --link-hover-color-rgb: 41, 128, 185;
+  
+  /* Цвета кода */
+  --code-bg: #f8f9fa;
+  --code-bg-rgb: 248, 249, 250;
+  --code-color: #333;
+  --code-color-rgb: 51, 51, 51;
+  
+  /* Типография */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-base: 1.6;
+  --line-height-heading: 1.2;
+  
+  /* Размеры */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Радиусы */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 20px;
+  --border-radius-full: 9999px;
+  
+  /* Тени */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+  /* Анимации */
+  --transition-base: 0.3s;
+  --transition-fast: 0.15s;
+  --transition-slow: 0.5s;
+  
+  /* Макеты */
+  --header-height: 60px;
+  --sidebar-width: 300px;
+  --container-max-width: 1200px;
+  --section-padding: 4rem;
+}

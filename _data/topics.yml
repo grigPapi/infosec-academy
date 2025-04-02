@@ -1,0 +1,122 @@
+# Топики и уроки
+- id: network-security
+  title: Сетевая безопасность
+  lessons:
+    - id: network-security-intro
+      title: Введение в сетевую безопасность
+      duration: 12
+      slug: network-security/intro
+      
+    - id: osi-model
+      title: Модель OSI и безопасность
+      duration: 15
+      slug: network-security/osi-model
+      
+    - id: tcpip-basics
+      title: Модель TCP/IP - основы
+      duration: 7
+      slug: network-security/tcpip-basics
+      
+    - id: tcpip-application-layer
+      title: Уровень приложения TCP/IP
+      duration: 6
+      slug: network-security/tcpip-application-layer
+      
+    - id: tcpip-ip-layer
+      title: Уровень IP
+      duration: 10
+      slug: network-security/tcpip-ip-layer
+      
+    - id: tcp-vs-udp
+      title: TCP и UDP - сравнение
+      duration: 8
+      slug: network-security/tcp-vs-udp
+      
+    - id: ports-explained
+      title: Что такое порт в компьютере
+      duration: 13
+      slug: network-security/ports-explained
+
+- id: ntfs
+  title: NTFS и файловая система
+  lessons:
+    - id: ntfs-permissions
+      title: Права доступа в NTFS
+      duration: 14
+      slug: ntfs/permissions
+      
+    - id: ntfs-quick-learn
+      title: Учимся за 3 минуты - NTFS
+      duration: 4
+      slug: ntfs/quick-learn
+      
+    - id: ntfs-owner-change
+      title: Смена владельца файлов в NTFS
+      duration: 15
+      slug: ntfs/owner-change
+      
+    - id: ntfs-bypass
+      title: Как обойти права доступа в NTFS
+      duration: 20
+      slug: ntfs/bypass
+      
+    - id: ntfs-vs-fat
+      title: Отличие NTFS от FAT32 и от exFAT
+      duration: 25
+      slug: ntfs/comparison
+
+- id: hacking
+  title: Взлом и защита
+  lessons:
+    - id: pass-the-hash
+      title: Атака Pass-The-Hash
+      duration: 14
+      slug: hacking/pass-the-hash
+      
+    - id: wifi-wpa2
+      title: Взлом Wi-Fi пароля wpa2
+      duration: 33
+      slug: hacking/wifi-wpa2
+      
+    - id: brute-force
+      title: Брутфорс - взлом пароля путём перебора
+      duration: 15
+      slug: hacking/brute-force
+      
+    - id: windows-mimikatz
+      title: Взлом пароля в Windows 10 - mimikatz
+      duration: 20
+      slug: hacking/windows-mimikatz
+      
+    - id: av-bypass
+      title: Обход антивируса - Шифрование трояна
+      duration: 27
+      slug: hacking/av-bypass
+
+- id: web-security
+  title: Веб-безопасность
+  lessons:
+    - id: sql-injection
+      title: Взлом WEB сайтов - SQL инъекции
+      duration: 24
+      slug: web-security/sql-injection
+      
+    - id: reflected-xss
+      title: Reflected XSS - Отражённый
+      duration: 11
+      slug: web-security/reflected-xss
+      
+    - id: stored-xss
+      title: Stored XSS - Хранимый
+      duration: 20
+      slug: web-security/stored-xss
+      
+    - id: csrf
+      title: CSRF атака - межсайтовая подделка запроса
+      duration: 23
+      slug: web-security/csrf
+      
+    - id: lfi
+      title: Уязвимость DVWA LFI - Local File Inclusion
+      duration: 17
+      slug: web-security/lfi

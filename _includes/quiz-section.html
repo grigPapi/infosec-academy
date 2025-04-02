@@ -1,0 +1,26 @@
+<div class="quiz-section">
+    <h3>Проверьте свои знания</h3>
+    
+    {% if page.quiz %}
+      {% for question in page.quiz %}
+      <div class="quiz-question" data-question-id="{{ forloop.index }}">
+        <p>{{ forloop.index }}. {{ question.text }}</p>
+        <ul class="quiz-options">
+          {% for option in question.options %}
+          <li class="quiz-option">
+            <label>
+              <input type="radio" name="q{{ forloop.parentloop.index }}" value="{{ forloop.index }}">
+              {{ option }}
+            </label>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      
+      <button class="quiz-submit" data-topic="{{ page.topic }}" data-lesson="{{ page.slug }}">Проверить ответы</button>
+      <div class="quiz-results" style="display: none;"></div>
+    {% else %}
+      <p>Для этого урока еще не добавлены тесты.</p>
+    {% endif %}
+  </div>

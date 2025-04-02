@@ -1,0 +1,118 @@
+---
+layout: default
+---
+
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Главная</a></li>
+      <li><a href="{{ site.baseurl }}/courses/">Курсы</a></li>
+      <li>{{ page.title }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="course-header">
+  <div class="container">
+    <div class="course-header-content">
+      <h1>{{ page.title }}</h1>
+      <div class="course-meta">
+        <span><i class="icon-lessons"></i> {{ page.lessons_count }} уроков</span>
+        {% if page.certification %}
+        <span><i class="icon-certificate"></i> {{ page.certification }}</span>
+        {% endif %}
+        {% if page.duration %}
+        <span><i class="icon-clock"></i> {{ page.duration }} часов</span>
+        {% endif %}
+        {% if page.level %}
+        <span><i class="icon-level"></i> {{ page.level }}</span>
+        {% endif %}
+      </div>
+      
+      <div class="course-buttons">
+        <a href="#lessons" class="btn btn-primary">Начать обучение</a>
+        {% if page.demo_link %}
+        <a href="{{ page.demo_link }}" class="btn btn-secondary">Посмотреть демо</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="course-content">
+    <div class="course-description">
+      {{ content }}
+    </div>
+    
+    <div class="course-topics" id="lessons">
+      <h2>Содержание курса</h2>
+      
+      {% assign course_topics = site.data.topics | where_exp: "topic", "site.lessons | where: 'course', page.course_id | map: 'topic' | uniq contains topic.id" %}
+      
+      {% for topic in course_topics %}
+        <div class="topic-item">
+          <div class="topic-header js-toggle-topic">
+            <h3>{{ topic.title }}</h3>
+            <span class="topic-toggle">+</span>
+          </div>
+          <div class="topic-content">
+            <ul class="lesson-list">
+              {% assign topic_lessons = site.lessons | where: "topic", topic.id | where: "course", page.course_id | sort: "lesson_order" %}
+              {% for lesson in topic_lessons %}
+                <li class="lesson-item">
+                  <a href="{{ site.baseurl }}{{ lesson.url }}" class="lesson-link">
+                    <span>{{ lesson.title }}</span>
+                    <span class="lesson-duration">{{ lesson.reading_time }} минут</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if page.instructors %}
+    <div class="course-instructors">
+      <h2>Инструкторы</h2>
+      <div class="instructors-grid">
+        {% for instructor_id in page.instructors %}
+          {% assign instructor = site.data.authors[instructor_id] %}
+          {% if instructor %}
+            <div class="instructor-card">
+              <div class="instructor-avatar">
+                <img src="{{ site.baseurl }}/assets/images/instructors/{{ instructor.avatar }}" alt="{{ instructor.name }}">
+              </div>
+              <div class="instructor-info">
+                <h3>{{ instructor.name }}</h3>
+                <p class="instructor-title">{{ instructor.title }}</p>
+                <p class="instructor-bio">{{ instructor.bio }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if page.faq %}
+    <div class="course-faq">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-list">
+        {% for item in page.faq %}
+          <div class="faq-item">
+            <div class="faq-question js-toggle-faq">
+              <h3>{{ item.question }}</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>{{ item.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

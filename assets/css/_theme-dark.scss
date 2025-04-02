@@ -1,0 +1,151 @@
+/**
+ * InfoSec Academy - Темная тема
+ */
+
+/* Стили для темной темы */
+[data-theme="dark"] {
+  /* Основные цвета */
+  --primary-color: #4361ee;
+  --primary-color-rgb: 67, 97, 238;
+  --primary-color-dark: #3a56d4;
+  --secondary-color: #3f8efc;
+  --secondary-color-rgb: 63, 142, 252;
+  --secondary-color-dark: #3b7ad9;
+  
+  /* Нейтральные цвета */
+  --light-color: #2d3748;
+  --light-color-rgb: 45, 55, 72;
+  --gray-color: #718096;
+  --gray-color-rgb: 113, 128, 150;
+  --dark-color: #1a1a2e;
+  --dark-color-rgb: 26, 26, 46;
+  
+  /* Цвета текста */
+  --text-color: #f1f1f1;
+  --text-color-rgb: 241, 241, 241;
+  --text-light: #a0aec0;
+  --text-light-rgb: 160, 174, 192;
+  --heading-color: #f8fafc;
+  --heading-color-rgb: 248, 250, 252;
+  
+  /* Цвета фона */
+  --background-color: #121212;
+  --background-color-rgb: 18, 18, 18;
+  --background-light: #1a1a2e;
+  --background-light-rgb: 26, 26, 46;
+  --background-dark: #0f0f1a;
+  --background-dark-rgb: 15, 15, 26;
+  
+  /* Цвета границ */
+  --border-color: #2d3748;
+  --border-color-rgb: 45, 55, 72;
+  --border-dark: #4a5568;
+  --border-dark-rgb: 74, 85, 104;
+  
+  /* Цвета ссылок */
+  --link-color: #63b3ed;
+  --link-color-rgb: 99, 179, 237;
+  --link-hover-color: #90cdf4;
+  --link-hover-color-rgb: 144, 205, 244;
+  
+  /* Цвета кода */
+  --code-bg: #2d3748;
+  --code-bg-rgb: 45, 55, 72;
+  --code-color: #e2e8f0;
+  --code-color-rgb: 226, 232, 240;
+  
+  /* Тени */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 10px 30px rgba(0, 0, 0, 0.6);
+  
+  /* Переопределение стилей для темной темы */
+  
+  /* Шапка */
+  header {
+    background-color: var(--dark-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Карточки курсов */
+  .course-card {
+    background-color: var(--background-light);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Блоки с топиками */
+  .topic-item {
+    background-color: var(--background-light);
+  }
+  
+  .topic-header {
+    background-color: var(--primary-color);
+  }
+  
+  /* Секции уроков */
+  .lesson-content {
+    background-color: var(--background-light);
+  }
+  
+  .lesson-sidebar {
+    background-color: var(--background-color);
+  }
+  
+  /* Блоки примечаний */
+  .note-block {
+    background-color: rgba(var(--info-color-rgb), 0.1);
+    border-left-color: var(--info-color);
+  }
+  
+  .warning-block {
+    background-color: rgba(var(--warning-color-rgb), 0.1);
+    border-left-color: var(--warning-color);
+  }
+  
+  .tip-block {
+    background-color: rgba(var(--success-color-rgb), 0.1);
+    border-left-color: var(--success-color);
+  }
+  
+  /* Блоки кода */
+  .code-block {
+    background-color: var(--code-bg);
+    border-color: var(--border-color);
+  }
+  
+  /* Таблицы */
+  table th {
+    background-color: var(--background-dark);
+  }
+  
+  table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Формы */
+  input, textarea, select {
+    background-color: var(--background-dark);
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
+  
+  /* Кнопки */
+  .btn-outline {
+    border-color: var(--primary-color);
+  }
+  
+  /* Комментарии */
+  .comment-item {
+    border-bottom-color: var(--border-color);
+  }
+  
+  .comment-avatar {
+    background-color: var(--primary-color);
+  }
+  
+  /* Инвертированные изображения */
+  img:not([src*="logo"]):not([src*="avatar"]) {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}

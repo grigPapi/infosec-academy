@@ -1,0 +1,13 @@
+<div class="lesson-navigation">
+    <h3>Содержание курса</h3>
+    <ul>
+      {% assign topic_lessons = site.lessons | where: "topic", page.topic | sort: "course_order" %}
+      {% for lesson in topic_lessons %}
+        <li>
+          <a href="{{ site.baseurl }}{{ lesson.url }}" {% if lesson.url == page.url %}class="active"{% endif %}>
+            {{ lesson.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>

@@ -1,0 +1,63 @@
+# Основные настройки сайта 
+title: InfoSec Academy 
+description: Практические курсы по кибербезопасности, хакингу, защите систем и сетей 
+url: https://infosec-academy.ru 
+baseurl: "" 
+lang: ru 
+ 
+# Контактная информация 
+email: info@infosec-academy.ru 
+phone: "+7 (123) 456-78-90" 
+social: 
+  youtube: PracticU 
+ 
+# Настройки Jekyll 
+permalink: pretty 
+markdown: kramdown 
+highlighter: rouge 
+sass: 
+  sass_dir: assets/css 
+  style: compressed 
+ 
+# Исключения из сборки 
+exclude: 
+  - Gemfile 
+  - Gemfile.lock 
+  - node_modules 
+  - package.json 
+  - package-lock.json 
+  - README.md 
+  - .git 
+  - .gitignore 
+ 
+# Коллекции 
+collections: 
+  courses: 
+    output: true 
+    permalink: /courses/:path/ 
+  lessons: 
+    output: true 
+    permalink: /lessons/:path/ 
+ 
+# Значения по умолчанию для коллекций 
+defaults: 
+  - scope: 
+      path: "" 
+      type: "courses" 
+    values: 
+      layout: "course" 
+  - scope: 
+      path: "" 
+      type: "lessons" 
+    values: 
+      layout: "lesson" 
+  - scope: 
+      path: "" 
+      type: "pages" 
+    values: 
+      layout: "page" 
+  - scope: 
+      path: "" 
+      type: "posts" 
+    values: 
+      layout: "post" 

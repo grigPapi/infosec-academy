@@ -1,0 +1,25 @@
+{
+  "name": "infosec-academy",
+  "version": "1.0.0",
+  "description": "Образовательный сайт по информационной безопасности",
+  "main": "index.js",
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload",
+    "build": "bundle exec jekyll build",
+    "clean": "bundle exec jekyll clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "infosec",
+    "cybersecurity",
+    "jekyll"
+  ],
+  "author": "InfoSec Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.20"
+  }
+}

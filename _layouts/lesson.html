@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="breadcrumbs">
+  <div class="container">
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Главная</a></li>
+      <li><a href="{{ site.baseurl }}/courses/">Курсы</a></li>
+      {% assign topic_data = site.data.topics | where: "id", page.topic | first %}
+      <li><a href="{{ site.baseurl }}/topics/{{ page.topic }}/">{{ topic_data.title }}</a></li>
+      <li>{{ page.title }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="container lesson-container">
+  <aside class="lesson-sidebar">
+    {% include lesson-progress.html %}
+    {% include lesson-navigation.html %}
+    {% include lesson-toc.html %}
+  </aside>
+  
+  <main class="lesson-content">
+    <div class="lesson-header">
+      <h1>{{ page.title }}</h1>
+      <div class="lesson-meta">
+        <span><i class="icon-calendar"></i> Обновлено: {{ page.last_updated | date: "%d.%m.%Y" }}</span>
+        <span><i class="icon-clock"></i> Время чтения: {{ page.reading_time }} минут</span>
+        <span><i class="icon-level"></i> Сложность: {% if page.difficulty == 'beginner' %}Начальный уровень{% elsif page.difficulty == 'intermediate' %}Средний уровень{% elsif page.difficulty == 'advanced' %}Продвинутый уровень{% else %}{{ page.difficulty }}{% endif %}</span>

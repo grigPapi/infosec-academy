@@ -1,0 +1,19 @@
+<div class="toc-menu">
+    <h3>Оглавление урока</h3>
+    <ul>
+      {% assign headers = content | split: '<h2' %}
+      {% for header in headers %}
+        {% if header contains 'id=' %}
+          {% assign id_start = header | split: 'id="' %}
+          {% assign id_end = id_start[1] | split: '"' %}
+          {% assign id = id_end[0] %}
+          
+          {% assign title_start = header | split: '>' %}
+          {% assign title_end = title_start[1] | split: '</h2' %}
+          {% assign title = title_end[0] | strip_html %}
+          
+          <li><a href="#{{ id }}">{{ title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
